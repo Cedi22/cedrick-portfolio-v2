@@ -125,4 +125,21 @@ document.addEventListener('DOMContentLoaded', () => {
       revealObserver.observe(el);
     });
   }
+
+
+  /* ---------- Logo OOF sound ---------- */
+  const brandLogo = document.getElementById('brand-logo');
+
+  if (brandLogo) {
+    const oofSound = new Audio('assets/sounds/oof.mp3');
+
+    brandLogo.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      oofSound.currentTime = 0;
+      oofSound.play();
+    });
+  }
 });
+
+
